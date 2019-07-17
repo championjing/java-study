@@ -1,4 +1,4 @@
-package com.rzwl.study.pattern;
+package com.rzwl.study.pattern.aIterator;
 
 public class Main {
 
