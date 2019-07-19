@@ -1,0 +1,43 @@
+package com.rzwl.study.pattern.hAbstractFactory.factory;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author : championjing
+ * @ClassName: Page
+ * @Description: 抽象的产品
+ * @Date: 7/19/2019 2:55 PM
+ */
+public abstract class Page {
+    protected String title;
+    protected String author;
+    protected List<Item> content = new ArrayList();
+    
+    public Page(String title,String author){
+        this.title = title;
+        this.author = author;
+    }
+    public void add(Item item){
+        content.add(item);
+    }
+    public abstract String makeHTML();
+
+    /**
+     * 采用了Template Method模式
+     */
+    public void output(){
+        String filename = title + ".html";
+        try {
+            Writer writer = new FileWriter(filename);
+            writer.write(this.makeHTML());
+            writer.close();
+            System.out.println(filename+"编写完成.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
