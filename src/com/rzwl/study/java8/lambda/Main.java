@@ -1,4 +1,4 @@
-package com.rzwl.study.lambda;
+package com.rzwl.study.java8.lambda;
 
 import org.junit.Test;
 
