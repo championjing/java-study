@@ -1,5 +1,7 @@
 package com.rzwl.study.entity;
 
+import org.w3c.dom.NameList;
+
 /**
  * @author : championjing
  * @ClassName: Employee
@@ -15,6 +17,11 @@ public class Employee {
 
     public Employee(int age){
         this.age = age;
+    }
+    public Employee(String name,int age,long id){
+        this.name = name;
+        this.age = age;
+        this.id = id;
     }
 
     public long getId() {
