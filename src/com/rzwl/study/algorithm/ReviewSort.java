@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @Description:
  * @date Date : 2020年11月12日 10:02
  */
-public class Review1 {
+public class ReviewSort {
 
     @Test
     public void testSort() {
